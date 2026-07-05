@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV</title>
+        <link rel="stylesheet" href="{% static 'cv/home_page.css' %}">
+    </head>
+    <body>
+        <div class="education_section">
+            {% for element in education_elements%}
+                Name of institution: {{element.name_of_institution}}<br>
+                Start year: {{element.start_year}}<br>
+                Finish year: {{element.finish_year}}<br>
+            {% endfor %}
+        </div>
+    </body>
+</html>

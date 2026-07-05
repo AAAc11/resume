@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education_section {
+    display: flex;
+    max-width: 300px;
+    background-color: #a1b5a6;
+    padding: 30px;
+}
