@@ -6,11 +6,23 @@
         <link rel="stylesheet" href="{% static 'cv/home_page.css' %}">
     </head>
     <body>
+        <div class="page_title"><h1><b>MY RESUME</b></h1></div>
         <div class="education_section">
-            {% for element in education_elements%}
+            <h1><b>EDUCATION</b></h1>
+            {% for element in education_elements %}
                 Name of institution: {{element.name_of_institution}}<br>
                 Start year: {{element.start_year}}<br>
                 Finish year: {{element.finish_year}}<br>
+            {% endfor %}
+        </div>
+        <div class="experience_section">
+            <h1><b>EXPERIENCE</b></h1>
+            {% for element in experience_elements %}
+                Employer: {{element.employer}}<br>
+                Position/Role: {{element.position_held_at_work}}<br>
+                Start date: {{element.start_date}}<br>
+                Finish date: {{element.finish_date}}<br>
+                Work description: {{element.work_description}}<br>
             {% endfor %}
         </div>
     </body>
