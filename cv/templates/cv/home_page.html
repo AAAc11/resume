@@ -1,14 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
     <head>
         <title>CV</title>
         <link rel="stylesheet" href="{% static 'cv/home_page.css' %}">
     </head>
     <body  class="bg-gray-900">
         <div>
-            <header class="absolute inset-x-0 top-0 z-50">
-                <nav aria-label="Global" class="flex items-center justify-center p-6 lg:px-8">
+            <header class="fixed inset-x-0 top-0 z-50">
+                <nav aria-label="Global" class="bg-gray-900 flex items-center justify-center p-6 lg:px-8">
                     <div class="flex lg:hidden">
                         <button type="button" command="show-modal" commandfor="mobile-menu" class="-m2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
                             <span class="sr-only">Options</span>
@@ -18,14 +18,33 @@
                         </button>
                     </div>
                     <div class="hidden lg:flex lg:gap-x-12">
-                        <a href="#" class="text-sm/6 font-semibold text-white">Education</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white">Experience</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white">About me</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white">Projects</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white">Certificates</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Education</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Experience</a>
+                        <a href="#about" class="text-sm/6 font-semibold text-white hover:text-gray-400">About me</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Projects</a>
+                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Certificates</a>
                     </div>
                 </nav>
             </header>
+            <div class="min-h-screen flex flex-col justify-between">
+                <div class="flex justify-start pt-70 pl-40">
+                    <h1 class="text-9xl font-sans text-white">Hi, I'm Anna</h1>
+                </div>
+                <div class="flex justify-center pb-5">
+                    <a href="#about" class="text-4xl text-white hover:text-gray-400">▼</a>
+                </div>
+            </div>
+            <section id="about" class="flex flex-col justify-start pl-30 pt-10 pb-50">
+                <h1 class="text-7xl font-sans text-white m-10">A little about me...</h1>
+                <div class=" max-w-lg rounded-2xl bg-gray-800 flex items-center justify-center p-7 ml-26">
+                    <p class="text-white text-center text-2xl">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </section>
         </div>
+        <script>
+            //setInterval(() => location.reload(), 1000);
+        </script>
     </body>
 </html>
