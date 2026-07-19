@@ -18,10 +18,10 @@
                         </button>
                     </div>
                     <div class="hidden lg:flex lg:gap-x-12">
+                        <a href="#about" class="text-sm/6 font-semibold text-white hover:text-gray-400">About me</a>
+                        <a href="#projects" class="text-sm/6 font-semibold text-white hover:text-gray-400">Projects</a>
                         <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Education</a>
                         <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Experience</a>
-                        <a href="#about" class="text-sm/6 font-semibold text-white hover:text-gray-400">About me</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Projects</a>
                         <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Certificates</a>
                     </div>
                 </nav>
@@ -36,10 +36,30 @@
             </div>
             <section id="about" class="flex flex-col justify-start pl-30 pt-10 pb-50">
                 <h1 class="text-7xl font-sans text-white m-10">A little about me...</h1>
-                <div class=" max-w-lg rounded-2xl bg-gray-800 flex items-center justify-center p-7 ml-26">
-                    <p class="text-white text-center text-2xl">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                <div class="flex flex-row items-center gap-40">
+                    <div class="max-w-lg rounded-2xl bg-gray-800 flex items-center justify-center p-7 ml-26">
+                        <p class="text-white text-center text-2xl">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <img src="{% static 'cv/stick_woman.svg' %}" alt="Stick woman" class="w-110 h-110">
+                </div>
+            </section>
+            <section id="projects" class="flex flex-col justify-start pl-30 pr-30 pb-50 pt-10">
+                <h1 class="text-7xl font-sans text-white m-10">My projects</h1>
+                <div class="grid grid-cols-3 gap-6 pt-10">
+                    <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
+                        <h2 class="text-white font-bold">Project I</h2>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
+                        <h2 class="text-white font-bold">Project II</h2>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
+                        <h2 class="text-white font-bold">Project III</h2>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
                 </div>
             </section>
         </div>
