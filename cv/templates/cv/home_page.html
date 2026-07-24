@@ -22,8 +22,7 @@
                         <a href="#about" class="text-sm/6 font-semibold text-white hover:text-gray-400">About me</a>
                         <a href="#projects" class="text-sm/6 font-semibold text-white hover:text-gray-400">Projects</a>
                         <a href="#education" class="text-sm/6 font-semibold text-white hover:text-gray-400">Education</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Experience</a>
-                        <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-400">Certificates</a>
+                        <a href="#contact" class="text-sm/6 font-semibold text-white hover:text-gray-400">Contact</a>
                     </div>
                 </nav>
             </header>
@@ -49,35 +48,57 @@
             <section id="projects" class="flex flex-col justify-start pl-30 pr-30 pb-50 pt-10">
                 <h1 class="text-7xl font-sans text-white m-10">My projects</h1>
                 <div class="grid grid-cols-3 gap-6 pt-10">
+                    {% for project in projects %}
                     <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
-                        <h2 class="text-white font-bold">Project I</h2>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <h2 class="text-white font-bold text-2xl p-4">{{ project.project_name }}</h2>
+                        <p class="text-white text-center text-[15px]">{{ project.project_description }}</p>
+                        <div class="flex items-center rounded-2xl bg-gray-600 px-4 py-1 mt-auto">
+                            <p class="text-gray-400 text-sm">{{ project.technologies }}</p>
+                        </div>
+                        <a href="{{ project.project_link }}" target="_blank" class="text-gray-400 hover:text-white text-sm mt-3">GitHub →</a>
                     </div>
-                    <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
-                        <h2 class="text-white font-bold">Project II</h2>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                    <div class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 h-96 hover:bg-gray-700">
-                        <h2 class="text-white font-bold">Project III</h2>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </section>
-            <section id="education" class="flex flex-col justify-start pl-30 pr-30 pt-10 pb-50">
+            <section id="education" class="flex flex-col justify-start pl-30 pt-6 pr-30 pb-20">
                 <h1 class="text-7xl font-sans text-white m-10">Education</h1>
                 <div class="flex flex-row justify-end gap-20">
                     <img src="{% static 'cv/uni_map.svg' %}" alt="University roadmap" class="w-140 h-120">
-                    <div class="max-w-lg rounded-2xl bg-gray-800 flex items-center justify-center p-7 ml-26">
+                    <div class="max-w-lg rounded-2xl bg-gray-800 flex items-center justify-center p-7 ml-26 h-100">
                         <p class="text-white text-center text-2xl">
-                            Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.                             Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-
+                            Labore et dolore magna aliqua. Ut enim ad minim veniam. Ddolor in reprehenderit in voluptate velit esse cillum.                             Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
                         </p>
                     </div>
                 </div>
             </section>
+            <section id="contact" class="flex flex-col justify-start pl-30 pr-30 pt-10 pb-20">
+                <h1 class="text-7xl font-sans text-white m-10">Contact</h1>
+                <div class="grid grid-cols-3 gap-6 pt-10">
+                    <div onclick="navigator.clipboard.writeText('annacygan344@gmail.com')" 
+                        class="group relative flex flex-col items-center rounded-2xl bg-gray-800 p-6 hover:bg-gray-700 cursor-pointer">
+                        <span class="pointer-events-none absolute opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white text-gray-900 text-sm font-semibold px-3 py-1 rounded-md -top-8 left-1/2 -translate-x-1/2">
+                            COPY ME
+                        </span>
+                        <img src="{% static 'cv/at-symbol.svg' %}" alt="At sign" class="w-13 h-13 pb-4">
+                        <h2 class="text-2xl text-white">annacygan344@gmail.com</h2>
+                    </div>
+                    <a href="https://linkedin.com/in/cygan-anna" target="_blank" class="flex flex-col items-center rounded-2xl bg-gray-800 p-6 hover:bg-gray-700">
+                        <img src="{% static 'cv/linkedin-app-white-icon.svg' %}" alt="LinkedIn logo" class="w-12 h-12 pb-4">
+                        <h2 class="text-2xl text-white">/in/cygan-anna</h2>
+                    </a>
+                    <a href="https://github.com/AAAc11" target="_blank" class="flex flex-col items-center rounded-2xl bg-gray-800 p-4 hover:bg-gray-700">
+                        <img src="{% static 'cv/GitHub_Invertocat_White_Clearspace.svg' %}" alt="Github logo" class="w-15 h-15 pb-4">
+                        <h2 class="text-2xl text-white">AAAc11</h2>
+                    </a>
+                </div>
+            </section>
         </div>
+        <footer class="flex flex-row justify-between border-t border-gray-600 m-10">
+            <p class="text-white pl-10 mt-10">© 2026 Anna Cygan</p>
+            <p class="text-white pr-10 mt-10">Cracow, Poland</p>
+        </footer>
         <script>
-            setInterval(() => location.reload(), 1000);
+            //setInterval(() => location.reload(), 1000);
         </script>
     </body>
 </html>
